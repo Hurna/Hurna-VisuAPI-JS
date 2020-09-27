@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "moduleResolution": "node",
+    "strict": true,
+    "noUnusedLocals": true,
+    "lib": [
+      "es2019"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
