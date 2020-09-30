@@ -22,8 +22,8 @@ export default class Array extends Visualizer {
   /**
    * Swap two elements of the array
    *
-   * @param a first element
-   * @param b second element
+   * @param a first element, should be a ptr key or an index.
+   * @param b second element, should be a ptr key or an index.
    */
   swap(_a: string | number, _b: string | number) {
     this.command('swap', arguments);
@@ -69,22 +69,20 @@ export default class Array extends Visualizer {
   }
 
   /**
-   * Select a scope of the array.
+   * Select a scope on the array.
    *
    * @param bx The index to select inclusively from.
-   * @param ex The index to select inclusively to. If omitted, it will only select index `sx`.
+   * @param ex The index to select inclusively to. If omitted, it will select index from `sx` to end.
    */
   selectScope(_bx: number, _ex?: number) {
     this.command('selectScope', arguments);
   }
 
   /**
-   * Stop selecting a range of the array.
+   * Stop selecting the scope of the array.
    *
-   * @param bx The index to stop selecting inclusively from.
-   * @param ex The index to stop selecting inclusively to. If omitted, it will only stop selecting index `sx`.
    */
-  deselectScope(_bx: number, _ex?: number) {
+  deselectScope() {
     this.command('deselectScope', arguments);
   }
 }
